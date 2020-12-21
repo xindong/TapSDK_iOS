@@ -44,11 +44,11 @@
     [self.view addSubview:momentButton];
     
     
-    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 50)];
-    [momentButton setTitle:@"动态小红点请求" forState:UIControlStateNormal];
-    [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-    [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:momentButton];
+    UIButton *momentRedPoint = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 300, 50)];
+    [momentRedPoint setTitle:@"动态小红点请求" forState:UIControlStateNormal];
+    [momentRedPoint setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [momentRedPoint addTarget:self action:@selector(taptapMomentRedPoint:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:momentRedPoint];
     
     
     
@@ -126,6 +126,7 @@
 
 
 - (void) taptapMomentRedPoint:(UIButton*) button {
+    NSLog(@"小红点请求");
     [TDSMomentSdk fetchNewMessage];
 }
 
