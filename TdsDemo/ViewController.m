@@ -23,6 +23,7 @@
     [super viewDidLoad];
     
     UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 50)];
+    loginButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [loginButton setTitle:@"Login" forState:UIControlStateNormal];
     [loginButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(taptapLogin:) forControlEvents:UIControlEventTouchUpInside];
@@ -30,6 +31,7 @@
     
     
     UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
+    logoutButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [logoutButton setTitle:@"Logout" forState:UIControlStateNormal];
     [logoutButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [logoutButton addTarget:self action:@selector(taptapLogout:) forControlEvents:UIControlEventTouchUpInside];
@@ -38,6 +40,7 @@
     
     
     UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 50)];
+    momentButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [momentButton setTitle:@"Moment" forState:UIControlStateNormal];
     [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
@@ -45,6 +48,7 @@
     
     
     UIButton *momentRedPoint = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 300, 50)];
+    momentRedPoint.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [momentRedPoint setTitle:@"动态小红点请求" forState:UIControlStateNormal];
     [momentRedPoint setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentRedPoint addTarget:self action:@selector(taptapMomentRedPoint:) forControlEvents:UIControlEventTouchUpInside];
