@@ -51,18 +51,18 @@
 
 
 - (void)onLoginSuccess:(TTSDKAccessToken *)token {
+    NSLog(@"Login success %@", [token toJsonString]);
     
 }
 
 - (void)onLoginCancel {
+    NSLog(@"Login cancel");
     
 }
 
 - (void)onLoginError:(AccountGlobalError *)error{
-    
+    NSLog(@"Login error %@", [error toJsonString]);
 }
-
-
 
 
 @end

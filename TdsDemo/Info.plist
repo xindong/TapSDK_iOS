@@ -62,5 +62,26 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>taptap</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>ttFwFdCIr6u71WQDQwQN</string>
+            </array>
+        </dict>
+    </array>
+
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+       <string>tapiosdk</string>
+       <string>tapsdk</string>
+    </array>
+
 </dict>
 </plist>
