@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import <TapSDK/TapSDK.h>
+#import <TapSDK/TapDB.h>
 #import <TapSDK/TapLoginHelper.h>
 #import <TapSDK/TDSMoment.h>
 
@@ -56,6 +57,11 @@
     
     // 开启 TapDB
     [TDSInitializer enableTapDBWithChannel:@"default" gameVersion:@"1.0.0"];
+    NSLog(@"current profile %@", [TTSDKProfile currentProfile].toJsonString);
+    if ([TTSDKProfile currentProfile ] != nil) {
+        NSLog(@"current has user %@", [TTSDKProfile currentProfile].openid);
+        [TapDB setUser:[TTSDKProfile currentProfile].openid loginType:TapDBLoginTypeTapTap];
+    }
         
     // 开启 动态
     [TDSInitializer enableMoment];
@@ -83,6 +89,8 @@
 - (void)onLoginSuccess:(TTSDKAccessToken *)token {
     NSLog(@"Login success %@", [token toJsonString]);
     
+    // set user
+    [TapDB setUser:[TTSDKProfile currentProfile].openid loginType:TapDBLoginTypeTapTap];
 }
 
 - (void)onLoginCancel {
