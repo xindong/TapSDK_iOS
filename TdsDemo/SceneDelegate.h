@@ -2,7 +2,7 @@
 //  SceneDelegate.h
 //  TdsDemo
 //
-//  Created by 曹箭波 on 2020/12/21.
+//  Created by tapsdk team on 2020/12/21.
 //
 
 #import <UIKit/UIKit.h>
