@@ -30,11 +30,10 @@ void dispatch_throttle_by_type(NSTimeInterval threshold, TDSMomentGCDThrottleTyp
 void dispatch_throttle_by_type_on_queue(NSTimeInterval threshold, TDSMomentGCDThrottleType type, dispatch_queue_t queue, TDSMomentGCDThrottleBlock block);
 
 
-
 + (void)throttle:(NSTimeInterval)threshold block:(TDSMomentGCDThrottleBlock)block;
 + (void)throttle:(NSTimeInterval)threshold queue:(dispatch_queue_t)queue block:(TDSMomentGCDThrottleBlock)block;
 + (void)throttle:(NSTimeInterval)threshold type:(TDSMomentGCDThrottleType)type block:(TDSMomentGCDThrottleBlock)block;
-+ (void)throttle:(NSTimeInterval)threshold type:(TDSMomentGCDThrottleType)type queue:(dispatch_queue_t)queue block:(TDSMomentGCDThrottleBlock)block ignoreBlock:( nullable TDSMomentGCDThrottleBlock)ignoreBlock;
++ (void)throttle:(NSTimeInterval)threshold type:(TDSMomentGCDThrottleType)type queue:(nullable dispatch_queue_t)queue block:(TDSMomentGCDThrottleBlock)block ignoreBlock:(nullable TDSMomentGCDThrottleBlock)ignoreBlock;
 
 @end
 

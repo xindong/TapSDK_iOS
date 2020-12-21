@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+FOUNDATION_EXPORT NSString * const LOGIN_ERROR_ACCESS_DENIED;
+FOUNDATION_EXPORT NSString * const LOGIN_ERROR_FORBIDDEN;
+FOUNDATION_EXPORT NSString * const LOGIN_ERROR_PERMISSION_RESULT;
 
 @interface AccountGlobalError : NSObject
 @property (nonatomic, assign) NSInteger code;
@@ -15,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *error;
 @property (nonatomic, copy) NSString *errorDescription;
 
-- (instancetype)initWithNSError:(NSError *)error;
+- (instancetype)initWithName:(NSString *)errorName NSError:(NSError *)error;
+
 - (NSString *)toJsonString;
 @end
 

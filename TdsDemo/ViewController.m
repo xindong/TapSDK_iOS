@@ -8,8 +8,9 @@
 #import "ViewController.h"
 #import <TapSDK/TapSDK.h>
 #import <TapSDK/TapLoginHelper.h>
+#import <TapSDK/TDSMoment.h>
 
-@interface ViewController ()<TapLoginResultDelegate>
+@interface ViewController ()<TapLoginResultDelegate, TDSMomentDelegate>
 - (void) initTapSDK;
 
 @end
@@ -26,6 +27,16 @@
     [loginButton addTarget:self action:@selector(taptapLogin:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
+    
+    
+    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
+    [momentButton setTitle:@"Moment" forState:UIControlStateNormal];
+    [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:momentButton];
+    
+    
+    
     [self initTapSDK];
 }
 
@@ -41,6 +52,7 @@
         
     // 开启 动态
     [TDSInitializer enableMoment];
+    [TDSMomentSdk setDelegate:self];
     
 }
 
@@ -49,6 +61,11 @@
     [TapLoginHelper startTapLogin:@[@"public_profile"]];
 }
 
+
+- (void) taptapMoment:(UIButton *) button {
+    TDSMomentConfig *momentConfig = [[TDSMomentConfig alloc] init];
+    [TDSMomentSdk openTapMomentWithConfig:momentConfig];
+}
 
 - (void)onLoginSuccess:(TTSDKAccessToken *)token {
     NSLog(@"Login success %@", [token toJsonString]);
@@ -62,6 +79,10 @@
 
 - (void)onLoginError:(AccountGlobalError *)error{
     NSLog(@"Login error %@", [error toJsonString]);
+}
+
+- (void)didChangeResultCode:(NSInteger)code msg:(NSString *)msg {
+    
 }
 
 

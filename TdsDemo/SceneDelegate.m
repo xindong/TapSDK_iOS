@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-#import <TapSDK/TTSDKApplicationDelegate.h>
+#import <TapSDK/TapSDK.h>
 
 @interface SceneDelegate ()
 
@@ -39,7 +39,7 @@
 }
 
 - (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
-    [[TTSDKApplicationDelegate sharedInstance] handleTapTapOpenURL:URLContexts.allObjects.firstObject.URL];
+    [TapLoginHelper handleTapTapOpenURL:URLContexts.allObjects.firstObject.URL];
 }
 
 

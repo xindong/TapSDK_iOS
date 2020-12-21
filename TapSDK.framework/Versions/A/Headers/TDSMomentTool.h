@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define TMDismissNotification  @"com.tapMoment.dismissAllController"
 #define TMLoginSucceedNotification @"com.tapmoment.loginSucceedNotification"
-#define TMHandleTapLoginNotification @"com.tapmoment.handleTapLoginNotification"
 #define TDSMomentCheckBindTap @"com.tapmoment.checkBindTapNotification"
 @class UIImage;
 @class UIViewController;
