@@ -29,12 +29,19 @@
     
     
     
-    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
+    UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
+    [logoutButton setTitle:@"Logout" forState:UIControlStateNormal];
+    [logoutButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [logoutButton addTarget:self action:@selector(taptapLogout:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:logoutButton];
+    
+    
+    
+    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 100, 50)];
     [momentButton setTitle:@"Moment" forState:UIControlStateNormal];
     [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:momentButton];
-    
     
     
     [self initTapSDK];
@@ -62,8 +69,14 @@
 }
 
 
+- (void) taptapLogout:(UIButton *) button {
+    [TapLoginHelper logout];
+}
+
+
 - (void) taptapMoment:(UIButton *) button {
     TDSMomentConfig *momentConfig = [[TDSMomentConfig alloc] init];
+    momentConfig.orientation = TDSMomentOrientationDefault;
     [TDSMomentSdk openTapMomentWithConfig:momentConfig];
 }
 
@@ -82,7 +95,7 @@
 }
 
 - (void)didChangeResultCode:(NSInteger)code msg:(NSString *)msg {
-    
+    NSLog(@"didChangeResultCode %@ ,%d", msg, code);
 }
 
 
