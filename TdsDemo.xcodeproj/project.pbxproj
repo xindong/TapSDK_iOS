@@ -15,6 +15,15 @@
 		7B560EB325903D13006840E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B560EB125903D13006840E1 /* LaunchScreen.storyboard */; };
 		7B560EB625903D13006840E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B560EB525903D13006840E1 /* main.m */; };
 		7B560EBE25903E17006840E1 /* TapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560EBD25903E17006840E1 /* TapSDK.framework */; };
+		7B560EC72590434B006840E1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560EC62590434B006840E1 /* WebKit.framework */; };
+		7B560EC925904390006840E1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560EC82590438A006840E1 /* libc++.tbd */; };
+		7B560ECC2590439A006840E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ECB2590439A006840E1 /* SystemConfiguration.framework */; };
+		7B560ECE259043A2006840E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ECD259043A2006840E1 /* AVFoundation.framework */; };
+		7B560ED0259043AA006840E1 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ECF259043A9006840E1 /* Photos.framework */; };
+		7B560ED2259043B1006840E1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED1259043B1006840E1 /* CoreTelephony.framework */; };
+		7B560ED4259043B9006840E1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED3259043B9006840E1 /* MobileCoreServices.framework */; };
+		7B560ED6259043C0006840E1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED5259043C0006840E1 /* AdSupport.framework */; };
+		7B560ED8259043C9006840E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED7259043C9006840E1 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +40,15 @@
 		7B560EB425903D13006840E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B560EB525903D13006840E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B560EBD25903E17006840E1 /* TapSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapSDK.framework; sourceTree = "<group>"; };
+		7B560EC62590434B006840E1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		7B560EC82590438A006840E1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7B560ECB2590439A006840E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7B560ECD259043A2006840E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7B560ECF259043A9006840E1 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		7B560ED1259043B1006840E1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7B560ED3259043B9006840E1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7B560ED5259043C0006840E1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7B560ED7259043C9006840E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +56,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B560EC925904390006840E1 /* libc++.tbd in Frameworks */,
+				7B560EC72590434B006840E1 /* WebKit.framework in Frameworks */,
+				7B560ED6259043C0006840E1 /* AdSupport.framework in Frameworks */,
+				7B560ED2259043B1006840E1 /* CoreTelephony.framework in Frameworks */,
+				7B560ECE259043A2006840E1 /* AVFoundation.framework in Frameworks */,
+				7B560ECC2590439A006840E1 /* SystemConfiguration.framework in Frameworks */,
+				7B560ED8259043C9006840E1 /* Security.framework in Frameworks */,
+				7B560ED4259043B9006840E1 /* MobileCoreServices.framework in Frameworks */,
 				7B560EBE25903E17006840E1 /* TapSDK.framework in Frameworks */,
+				7B560ED0259043AA006840E1 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +78,7 @@
 				7B560EBD25903E17006840E1 /* TapSDK.framework */,
 				7B560EA225903D12006840E1 /* TdsDemo */,
 				7B560EA125903D12006840E1 /* Products */,
+				7B560EC52590434A006840E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +106,22 @@
 				7B560EB525903D13006840E1 /* main.m */,
 			);
 			path = TdsDemo;
+			sourceTree = "<group>";
+		};
+		7B560EC52590434A006840E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B560ED7259043C9006840E1 /* Security.framework */,
+				7B560ED5259043C0006840E1 /* AdSupport.framework */,
+				7B560ED3259043B9006840E1 /* MobileCoreServices.framework */,
+				7B560ED1259043B1006840E1 /* CoreTelephony.framework */,
+				7B560ECF259043A9006840E1 /* Photos.framework */,
+				7B560ECD259043A2006840E1 /* AVFoundation.framework */,
+				7B560ECB2590439A006840E1 /* SystemConfiguration.framework */,
+				7B560EC82590438A006840E1 /* libc++.tbd */,
+				7B560EC62590434B006840E1 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
