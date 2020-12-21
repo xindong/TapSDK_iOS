@@ -23,7 +23,7 @@
 		7B560ED4259043B9006840E1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED3259043B9006840E1 /* MobileCoreServices.framework */; };
 		7B560ED6259043C0006840E1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED5259043C0006840E1 /* AdSupport.framework */; };
 		7B560ED8259043C9006840E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560ED7259043C9006840E1 /* Security.framework */; };
-		7B560EE42590735C006840E1 /* TapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560EE32590735C006840E1 /* TapSDK.framework */; };
+		7B560EEE259084B4006840E1 /* TapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B560EED259084B4006840E1 /* TapSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		7B560ED3259043B9006840E1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7B560ED5259043C0006840E1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		7B560ED7259043C9006840E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		7B560EE32590735C006840E1 /* TapSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapSDK.framework; sourceTree = "<group>"; };
+		7B560EED259084B4006840E1 /* TapSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B560EC925904390006840E1 /* libc++.tbd in Frameworks */,
-				7B560EE42590735C006840E1 /* TapSDK.framework in Frameworks */,
+				7B560EEE259084B4006840E1 /* TapSDK.framework in Frameworks */,
 				7B560EC72590434B006840E1 /* WebKit.framework in Frameworks */,
 				7B560ED6259043C0006840E1 /* AdSupport.framework in Frameworks */,
 				7B560ED2259043B1006840E1 /* CoreTelephony.framework in Frameworks */,
@@ -75,7 +75,7 @@
 		7B560E9725903D12006840E1 = {
 			isa = PBXGroup;
 			children = (
-				7B560EE32590735C006840E1 /* TapSDK.framework */,
+				7B560EED259084B4006840E1 /* TapSDK.framework */,
 				7B560EA225903D12006840E1 /* TdsDemo */,
 				7B560EA125903D12006840E1 /* Products */,
 				7B560EC52590434A006840E1 /* Frameworks */,
