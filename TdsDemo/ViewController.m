@@ -46,7 +46,7 @@
 
 - (void) taptapLogin:(UIButton *) button {
     [TapLoginHelper registerLoginResultDelegate:self];
-    [TapLoginHelper startTapLogin:@[@"public_profile"]]
+    [TapLoginHelper startTapLogin:@[@"public_profile"]];
 }
 
 
