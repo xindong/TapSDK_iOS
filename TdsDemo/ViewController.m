@@ -29,7 +29,6 @@
     [self.view addSubview:loginButton];
     
     
-    
     UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
     [logoutButton setTitle:@"Logout" forState:UIControlStateNormal];
     [logoutButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -43,6 +42,14 @@
     [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:momentButton];
+    
+    
+    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 50)];
+    [momentButton setTitle:@"动态小红点请求" forState:UIControlStateNormal];
+    [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:momentButton];
+    
     
     
     [self initTapSDK];
@@ -69,22 +76,26 @@
     
 }
 
+
+
+#pragma mark - 登录相关
+
+/**
+ 登录
+ */
 - (void) taptapLogin:(UIButton *) button {
     [TapLoginHelper registerLoginResultDelegate:self];
     [TapLoginHelper startTapLogin:@[@"public_profile"]];
 }
 
 
+/**
+ 登出
+ */
 - (void) taptapLogout:(UIButton *) button {
     [TapLoginHelper logout];
 }
 
-
-- (void) taptapMoment:(UIButton *) button {
-    TDSMomentConfig *momentConfig = [[TDSMomentConfig alloc] init];
-    momentConfig.orientation = TDSMomentOrientationDefault;
-    [TDSMomentSdk openTapMomentWithConfig:momentConfig];
-}
 
 - (void)onLoginSuccess:(TTSDKAccessToken *)token {
     NSLog(@"Login success %@", [token toJsonString]);
@@ -102,9 +113,27 @@
     NSLog(@"Login error %@", [error toJsonString]);
 }
 
+#pragma mark -
+#pragma mark - 动态相关
+/**
+ 打开动态
+ */
+- (void) taptapMoment:(UIButton *) button {
+    TDSMomentConfig *momentConfig = [[TDSMomentConfig alloc] init];
+    momentConfig.orientation = TDSMomentOrientationDefault;
+    [TDSMomentSdk openTapMomentWithConfig:momentConfig];
+}
+
+
+- (void) taptapMomentRedPoint:(UIButton*) button {
+    [TDSMomentSdk fetchNewMessage];
+}
+
+
 - (void)didChangeResultCode:(NSInteger)code msg:(NSString *)msg {
     NSLog(@"didChangeResultCode %@ ,%d", msg, code);
 }
 
+#pragma mark -
 
 @end
