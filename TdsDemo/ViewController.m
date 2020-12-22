@@ -65,6 +65,8 @@
     config.clientId = @"FwFdCIr6u71WQDQwQN";
     
     [TDSInitializer initWithConfig:config];
+    // 注册登录相关信息
+    [TapLoginHelper registerLoginResultDelegate:self];
     
     // 开启 TapDB
     [TDSInitializer enableTapDBWithChannel:@"default" gameVersion:@"1.0.0"];
@@ -88,7 +90,6 @@
  登录
  */
 - (void) taptapLogin:(UIButton *) button {
-    [TapLoginHelper registerLoginResultDelegate:self];
     [TapLoginHelper startTapLogin:@[@"public_profile"]];
 }
 

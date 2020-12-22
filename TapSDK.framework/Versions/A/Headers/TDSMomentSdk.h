@@ -9,7 +9,6 @@
 #import "TDSPostMomentData.h"
 #import "TDSMomentResultCode.h"
 #import <Foundation/Foundation.h>
-#import "TDSMomentAccessToken.h"
 
 //#import "TapTapSDK.h"
 
