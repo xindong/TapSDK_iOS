@@ -23,42 +23,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 50)];
+    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 50, 100, 50)];
     loginButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [loginButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(taptapLogin:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
 
-    UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 50)];
+    UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 150, 100, 50)];
     logoutButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [logoutButton setTitle:@"登出" forState:UIControlStateNormal];
     [logoutButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [logoutButton addTarget:self action:@selector(taptapLogout:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:logoutButton];
 
-    UIButton *profileButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 300, 50)];
+    UIButton *profileButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 300, 50)];
     profileButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [profileButton setTitle:@"获取用户最新信息" forState:UIControlStateNormal];
     [profileButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [profileButton addTarget:self action:@selector(fetchProfile:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:profileButton];
 
-    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 50)];
+    UIButton *momentButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 350, 100, 50)];
     momentButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [momentButton setTitle:@"打开动态" forState:UIControlStateNormal];
     [momentButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentButton addTarget:self action:@selector(taptapMoment:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:momentButton];
 
-    UIButton *momentRedPoint = [[UIButton alloc] initWithFrame:CGRectMake(100, 500, 300, 50)];
+    UIButton *momentRedPoint = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 300, 50)];
     momentRedPoint.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [momentRedPoint setTitle:@"获取动态未读数" forState:UIControlStateNormal];
     [momentRedPoint setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [momentRedPoint addTarget:self action:@selector(taptapMomentRedPoint:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:momentRedPoint];
 
-    UIButton *dbButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 600, 300, 50)];
+    UIButton *dbButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 550, 300, 50)];
     dbButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [dbButton setTitle:@"进入TapDB测试" forState:UIControlStateNormal];
     [dbButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
@@ -161,6 +161,7 @@
 
 - (void)toTapDB:(UIButton *)button {
     TapDBViewController *dbController = [TapDBViewController new];
+//    [self showViewController:dbController sender:nil];
     [self presentViewController:dbController animated:YES completion:nil];
 }
 
