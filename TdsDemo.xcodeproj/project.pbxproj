@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F427CC9259B28450072677B /* TapDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F427CC8259B28450072677B /* TapDBViewController.m */; };
 		7B0662442591D3240000DE66 /* TapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0662432591D3240000DE66 /* TapSDK.framework */; };
 		7B560EA525903D12006840E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B560EA425903D12006840E1 /* AppDelegate.m */; };
 		7B560EA825903D12006840E1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B560EA725903D12006840E1 /* SceneDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F427CC7259B28450072677B /* TapDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TapDBViewController.h; sourceTree = "<group>"; };
+		3F427CC8259B28450072677B /* TapDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapDBViewController.m; sourceTree = "<group>"; };
 		7B0662432591D3240000DE66 /* TapSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapSDK.framework; sourceTree = "<group>"; };
 		7B560EA025903D12006840E1 /* TdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B560EA325903D12006840E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				7B560EA725903D12006840E1 /* SceneDelegate.m */,
 				7B560EA925903D12006840E1 /* ViewController.h */,
 				7B560EAA25903D12006840E1 /* ViewController.m */,
+				3F427CC7259B28450072677B /* TapDBViewController.h */,
+				3F427CC8259B28450072677B /* TapDBViewController.m */,
 				7B560EAC25903D12006840E1 /* Main.storyboard */,
 				7B560EAF25903D13006840E1 /* Assets.xcassets */,
 				7B560EB125903D13006840E1 /* LaunchScreen.storyboard */,
@@ -194,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B560EAB25903D12006840E1 /* ViewController.m in Sources */,
+				3F427CC9259B28450072677B /* TapDBViewController.m in Sources */,
 				7B560EA525903D12006840E1 /* AppDelegate.m in Sources */,
 				7B560EB625903D13006840E1 /* main.m in Sources */,
 				7B560EA825903D12006840E1 /* SceneDelegate.m in Sources */,
