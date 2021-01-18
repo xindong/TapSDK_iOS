@@ -8,9 +8,7 @@
 #import "ViewController.h"
 #import "TapDBViewController.h"
 #import <TapSDK/TapSDK.h>
-#import <TapSDK/TapDB.h>
-#import <TapSDK/TapLoginHelper.h>
-#import <TapSDK/TDSMoment.h>
+
 
 @interface ViewController ()<TapLoginResultDelegate, TDSMomentDelegate>
 
@@ -131,7 +129,7 @@
 
 - (void)onLoginError:(AccountGlobalError *)error {
     if (error  != nil) {
-        if ([LOGIN_ERROR_ACCESS_DENIED isEqualToString:error.error] || [LOGIN_ERROR_FORBIDDEN isEqualToString:error.error] || [LOGIN_ERROR_INVALID_GRANT isEqualToString:error.error]) {
+        if ([LOGIN_ERROR_ACCESS_DENIED isEqualToString:error.error] ||  [LOGIN_ERROR_INVALID_GRANT isEqualToString:error.error]) {
             NSLog(@"当前 TOKEN已经失效， 需要提示用户重新执行 TapTap 登录流程");
         }
     }
