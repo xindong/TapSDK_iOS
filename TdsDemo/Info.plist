@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>TdsDemo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -16,8 +18,26 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>taptap</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ttFwFdCIr6u71WQDQwQN</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tapiosdk</string>
+		<string>tapsdk</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
@@ -63,25 +83,14 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
     
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>taptap</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>ttFwFdCIr6u71WQDQwQN</string>
-            </array>
-        </dict>
-    </array>
-
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-       <string>tapiosdk</string>
-       <string>tapsdk</string>
-    </array>
-
+    <!--使用到动态功能时需要配置，可替换授权文案-->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>App需要您的同意,才能访问相册</string>
+    <!-- 相机 -->
+    <key>NSCameraUsageDescription</key>
+    <string>App需要您的同意,才能访问相机</string>
+    <!-- 麦克风 -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>App需要您的同意,才能访问麦克风</string>
 </dict>
 </plist>
